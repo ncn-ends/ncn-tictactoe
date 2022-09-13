@@ -27,6 +27,7 @@ import {
     LearnMoreLinks,
     ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import { Playboard } from './src/components/Playboard';
 
 const Section: React.FC<
     PropsWithChildren<{
@@ -105,6 +106,7 @@ const App = () => {
                 <Text>Hello</Text>
                 <Button title="Click Me" style={{alignSelf: 'center'}} onPress={() => handlePress()}/>
                 <Badge label={count} style={{alignSelf: 'center'}} />
+                <Playboard />
             </View>
         </SafeAreaView>
     );
