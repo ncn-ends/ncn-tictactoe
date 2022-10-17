@@ -7,12 +7,12 @@ const Playboard: PlayboardType = () => {
     const Tiles = Array.from({length: 9}, (_, i) => <Tile pos={i + 1} key={i}/>)
 
     return (
-        <View>
-            <Wrap m={3} style={{alignSelf: 'center'}}>
+        <View style={{alignItems: 'center', width: '95%', marginHorizontal: '2.5%', marginTop: 100}}>
+            <Wrap>
                 {Tiles}
             </Wrap>
         </View>
     )
 }
 
-export {Playboard};
+export { Playboard };

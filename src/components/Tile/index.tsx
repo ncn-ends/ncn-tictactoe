@@ -1,4 +1,5 @@
 import { Pressable } from "@react-native-material/core"
+import { Alert } from "react-native";
 
 type TileProps = {
     pos: number
@@ -14,7 +15,14 @@ export const Tile: React.FC<TileProps> = ({pos}) => {
         ? "skyblue"
         : "darkgrey";
 
+    const tapTile = () => {
+        alert('Hello ' + pos);
+    }
+
     return (
-        <Pressable style={{ width: 120, height: 120, backgroundColor: backgroundColor }} />
+        <Pressable 
+            style={{ width: '33%', height: 120, backgroundColor }} 
+            onPress={()=>tapTile()} 
+        />
     )
 }
